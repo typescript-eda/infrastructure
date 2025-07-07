@@ -25,6 +25,23 @@ This repository was extracted from the original chatgpt-buddy monorepo as part o
 3. Configure npm publishing with NPM_TOKEN secret
 4. Update README with proper documentation
 
+** Package Configuration Updates (2025-01-07)
+
+As part of the post-monorepo-separation tasks, the package.json was updated to reflect the new organizational structure:
+
+*** Changes Made
+- Updated package name to =@typescript-eda/infrastructure= (using the typescript-eda npm organization)
+- Updated repository URLs to point to =https://github.com/typescript-eda/infrastructure=
+- Updated bugs URL to =https://github.com/typescript-eda/infrastructure/issues=
+- Updated homepage to =https://github.com/typescript-eda/infrastructure=
+- Changed dependency from workspace reference to npm package: =@typescript-eda/domain@^1.0.0=
+- Added =@typescript-eda/domain= as both a dependency and peerDependency
+- Added =publishConfig= with public access for npm publishing
+- Added proper author attribution to "TypeScript-EDA Team"
+
+*** Rationale
+These changes complete the transition from the monorepo structure to independent repositories under the typescript-eda GitHub organization. The package now properly declares its dependency on the domain package via npm, ensuring clean separation of concerns while maintaining the architectural relationship between domain and infrastructure layers.
+
 ** Original Development
 
 The infrastructure package was developed to provide production-ready adapters for:

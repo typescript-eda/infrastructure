@@ -28,14 +28,14 @@
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rydnr/typescript-eda-infrastructure.git"
+    "url": "https://github.com/typescript-eda/infrastructure.git"
   },
   "bugs": {
-    "url": "https://github.com/rydnr/typescript-eda-infrastructure/issues"
+    "url": "https://github.com/typescript-eda/infrastructure/issues"
   },
-  "homepage": "https://typescript-eda.org/infrastructure",
+  "homepage": "https://github.com/typescript-eda/infrastructure",
   "dependencies": {
-    "@typescript-eda/domain": "workspace:*",
+    "@typescript-eda/domain": "^1.0.0",
     "reflect-metadata": "^0.2.0"
   },
   "devDependencies": {
@@ -49,7 +49,7 @@
     "typescript": "^5.0.0"
   },
   "peerDependencies": {
-    "@typescript-eda/domain": "workspace:*"
+    "@typescript-eda/domain": "^1.0.0"
   },
   "files": [
     "dist",
