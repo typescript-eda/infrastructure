@@ -1,0 +1,70 @@
+#+TITLE: TypeScript-EDA Infrastructure - Development Journal
+#+AUTHOR: TypeScript-EDA Team
+#+DATE: [2024-01-07]
+
+* Overview
+
+This repository contains the infrastructure adapters and implementations for the TypeScript-EDA event-driven architecture framework. It provides concrete implementations of ports defined in the domain layer, following hexagonal architecture principles.
+
+* Repository History
+
+** Monorepo Separation (2024-01-07)
+
+This repository was extracted from the original chatgpt-buddy monorepo as part of Phase 8A of the Semantest platform evolution. The separation preserves the complete git history of the typescript-eda-infrastructure directory.
+
+*** Key Changes
+- Extracted from =typescript-eda-infrastructure/= directory in the monorepo
+- Now published as =@typescript-eda/infrastructure= on npm
+- Repository URL: https://github.com/typescript-eda/infrastructure
+- Part of the typescript-eda organization
+- Depends on =@typescript-eda/domain=
+
+*** Post-Separation Setup Required
+1. Update package.json dependencies from workspace references to npm packages
+2. Set up GitHub Actions CI/CD workflow
+3. Configure npm publishing with NPM_TOKEN secret
+4. Update README with proper documentation
+
+** Original Development
+
+The infrastructure package was developed to provide production-ready adapters for:
+- Event bus implementations (RabbitMQ, Kafka, In-Memory)
+- Repository implementations (PostgreSQL, MongoDB, In-Memory)
+- Command and query buses
+- External service adapters
+
+* Technical Architecture
+
+** Adapter Categories
+
+*** Event Bus Adapters
+- RabbitMQ adapter with reliable messaging
+- Kafka adapter for high-throughput scenarios
+- In-memory adapter for testing
+- Event serialization/deserialization
+
+*** Repository Adapters
+- PostgreSQL with event sourcing support
+- MongoDB for document-based aggregates
+- In-memory for testing
+- Transaction management
+
+*** External Service Adapters
+- HTTP client adapters
+- WebSocket adapters
+- Authentication adapters
+- Monitoring and logging adapters
+
+** Design Patterns
+- Hexagonal architecture (ports and adapters)
+- Dependency injection
+- Interface segregation
+- Open/closed principle
+
+* Future Roadmap
+
+- Add Redis event bus adapter
+- Implement CQRS read model projections
+- Add GraphQL adapter
+- Improve error handling and retry logic
+- Add comprehensive integration tests
