@@ -18,7 +18,8 @@
  * @module infrastructure/decorators
  */
 
-import { Port } from '../domain/port';
+import 'reflect-metadata';
+import { Port } from '@typescript-eda/domain';
 
 /**
  * A class decorator that associates an adapter with a port.
@@ -26,7 +27,7 @@ import { Port } from '../domain/port';
  * @returns {ClassDecorator} The class decorator.
  */
 export function AdapterFor(port: Port): ClassDecorator {
-  return (target: unknown) => {
+  return (target: any) => {
     Reflect.defineMetadata('port', port, target);
   };
 }
